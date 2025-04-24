@@ -1,5 +1,5 @@
-# Real-Time-Serverless-IOT-Dashboard
-Real-Time Serverless IoT Dashboard (SmartFarm Monitor)
+# Real-Time-Serverless-IOT-Design
+Real-Time Serverless IoT Design (SmartFarm Monitor)
 
 ## Introduction:
 The main role of the project is to learn and understand how realtime IOT sensor data is being travelled to AWS cloud to generate the IOT dashboard and take required actions based on the realtime data. This project simulates IOT sensor data(eg., temperature and humidity) from the thing which is being send to IOTCore(PUB/SUB Topic) and from the topic, subscriber consumes the message in realtime and trigger alerts when the value of the temperature crosses the threshold
@@ -22,9 +22,17 @@ The main role of the project is to learn and understand how realtime IOT sensor 
 
 7. SNS : It is fully managed, serverless notification service which is used to send the notification to the subscribers
 
+## Understanding of Realtime IOT Design:
 
-PROJECT WORKING IN REALWORLD:
+1. Thing can send millions of data to the topic using Light weight protocol called MQTT protocol because devices has less compute & storage, so instaed of using HTTP/HTTPS using MQTT would be feasible options.
+
+2. Data will be transmitted to AWS Cloud- IOTCORE Service called MQTT broker which collects data in topics and further process to different lambda for analtics and perform required actions based on the data.
+
+
+## PROJECT WORKING IN REALWORLD:
+
 Sensors which are deployed in the farm called as thing capable of capturing the temperature, humidity and other factors data and sends it to the IOTCore(MQTT broker) using the MQTT protocol. The data which are travelling from the thing are encrypted using x509 certificate. The data wcan be send to multiple MQTT topics and from the topics various subscribers such as lambda can read the message and perform computation such as by taking necessary action based on the temperature threshold. The action would be notifying the owners and can trigger other lambda which inturns turn on the switch of farm sprinklers to water the farm.
 
-
+## Future Scope of this project:
+This project can be extended by sending the realtime data from lambda to IOT Analytics for creating the Realtime dashbaords.
 
