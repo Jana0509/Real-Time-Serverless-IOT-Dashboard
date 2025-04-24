@@ -34,5 +34,5 @@ The main role of the project is to learn and understand how realtime IOT sensor 
 Sensors which are deployed in the farm called as thing capable of capturing the temperature, humidity and other factors data and sends it to the IOTCore(MQTT broker) using the MQTT protocol. The data which are travelling from the thing are encrypted using x509 certificate. The data wcan be send to multiple MQTT topics and from the topics various subscribers such as lambda can read the message and perform computation such as by taking necessary action based on the temperature threshold. The action would be notifying the owners and can trigger other lambda which inturns turn on the switch of farm sprinklers to water the farm.
 
 ## Future Scope of this project:
-This project can be extended by sending the realtime data from lambda to IOT Analytics for creating the Realtime dashbaords.
+This project can be extended by sending the realtime data from lambda to IOT Analytics/Opensearch for creating the Realtime dashboards with the line/bar graph of temperature and humidity data.
 
