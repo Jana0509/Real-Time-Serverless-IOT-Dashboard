@@ -5,6 +5,7 @@ Real-Time Serverless IoT Design (SmartFarm Monitor)
 The main role of the project is to learn and understand how realtime IOT sensor data is being travelled to AWS cloud to generate the IOT dashboard and take required actions based on the realtime data. This project simulates IOT sensor data(eg., temperature and humidity) from the thing which is being send to IOTCore(PUB/SUB Topic) and from the topic, subscriber consumes the message in realtime and trigger alerts when the value of the temperature crosses the threshold
 
 ## Architecture:
+![IOT GIF](https://github.com/user-attachments/assets/8df1f38e-98d5-4ef3-a1d4-dcc207f00fcd)
 
 
 ## AWS Resources Used:
